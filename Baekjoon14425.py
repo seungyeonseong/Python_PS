@@ -14,17 +14,6 @@
 #     name: python3
 # ---
 
-n,k = map(int,input().split())
-li = list(map(int,input().split()))
-res = sum(li[0:k])
-total = -987654321
-for i in range(1,n-k+1):
-    total = max(res,total)
-    res =res-li[i-1]+li[i+k-1]
-total = max(res,total)
-print(total)
-
-
 # +
 n,m = map(int,input().split())
 s = set()
