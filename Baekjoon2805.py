@@ -15,76 +15,27 @@
 # ---
 
 # +
-###내풀이
-#딱맞게 떨어지는 높이를 찾으면 출력, 못찾으면 반복문으로 최댓값 구하기
+#나무의 길이가 기준치를 초과하면 break문을 통해 끝까지 탐색하는 코드 추가해서 시간초과 해결
 
 # +
-n, m = map(int,input().split())
+import sys
+input = sys.stdin.readline
+n, m = map(int, input().split())
+tree = list(map(int, input().split()))
 
-li = list(map(int,input().split()))
-
-
-end = max(li)-1
-start =1
-
+result =0
+start,end = 0,  max(tree)
 while start <= end:
     mid = (start+end)//2
-    
-    ans = 0
-    for i in li:
-        if i >= mid:
-            ans += i- mid
-    if ans == m:
-        print(mid)
-        break
-    elif ans > m:#오른쪽에서 찾아라
-        start = mid +1
-      
+    res = 0
+    for i in tree:
+        if i>mid:
+            res += i-mid
+            if res>m:
+                break
+    if res >=m:
+        start =mid+1
     else:
         end = mid -1
-       
-    #if start == end and ans != m:
-    #print(mid)
-    #    break
 
-        
-if ans!=m:
-    while 1:
-        ans = 0
-        for i in li:
-            if i >= mid:
-                ans += i -mid
-        if m <= ans:
-            print(mid)
-            break
-        mid -= 1
-#print(mid)
-
-# +
-#구글링__end는 m이 되도록 하는 값 중 최대에 멈춰서 이 때의 end를 반환
-
-# +
-n, m = map(int,input().split())
-
-li = list(map(int,input().split()))
-
-
-end = max(li)-1
-start =1
-
-while start <= end:
-    mid = (start+end)//2
-    
-    ans = 0
-    for i in li:
-        if i >= mid:
-            ans += i- mid
-    if ans >= m:
-        start = mid +1
-      
-    else:
-        end = mid -1
-print(end)#최대 높이인 end값 출력
-# -
-
-
+print(end)
