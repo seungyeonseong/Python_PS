@@ -6,7 +6,6 @@ input = sys.stdin.readline
 dx = [1, 0, -1, 0]
 dy = [0, 1, 0, -1]
 
-
 def bfs(x, y, visited, graph):
     q = deque()
     q.append((x, y))
