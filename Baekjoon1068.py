@@ -20,4 +20,3 @@ for i in range(n):
         cnt += 1
 print(cnt)
 print(parent)
-
