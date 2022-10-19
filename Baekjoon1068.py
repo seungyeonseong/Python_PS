@@ -21,5 +21,3 @@ for i in range(n):
 print(cnt)
 print(parent)
 
-
-
