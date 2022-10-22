@@ -1,6 +1,5 @@
 from collections import deque
 
-
 def solution(cacheSize, cities):
     answer = 0
     q = deque()
