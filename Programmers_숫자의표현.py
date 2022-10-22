@@ -11,3 +11,5 @@ def solution(n):
             tmp += li[idx+1]
             idx += 1
     return answer
+
+print(solution(15))
