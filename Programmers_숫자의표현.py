@@ -1,5 +1,3 @@
-
-
 def solution(n):
     answer = 1
     li = [i for i in range(n+1)]
