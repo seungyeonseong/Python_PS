@@ -28,4 +28,3 @@ for _ in range(int(input())):
             union_parent(parent,a,b)
             res += 1
     print(res)
-
